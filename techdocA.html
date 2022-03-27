@@ -2,48 +2,45 @@
 <html>
 <style>
 #formatDM {
-    background-color: rgb(225, 225, 247);
+    width: 25%;
+    background-color: rgb(167, 185, 204);
+    
 }
 .code_box1 {
-    width: 300px;
-    height: 100px;
-    border: 1px solid black;
+    width: 25%;
+    background-color: rgb(167, 185, 204);
     margin: 0;
     padding: 0;
     list-style-type: none;
 
 }
 .code_box2 {
-    width: 300px;
-    height: 100px;
-    border: 1px solid black;
+    width: 25%;
+    background-color: rgb(167, 185, 204);
     margin: 0;
     padding: 0;
     list-style-type: none;
 
 }
 .code_box3 {
-    width: 300px;
-    height: 100px;
-    border: 1px solid black;
+    width: 25%;
+    background-color: rgb(167, 185, 204);
     margin: 0;
     padding: 0;
     list-style-type: none;
 
 }
 .code_box4 {
-    width: 300px;
-    height: 100px;
-    border: 1px solid black;
+    width: 25%;
+    background-color: rgb(167, 185, 204);
     margin: 0;
     padding: 0;
     list-style-type: none;
 
 }
 .code_box5 {
-    width: 340px;
-    height: 410px;
-    border: 1px solid black;
+    width: 35%;
+    background-color: rgb(167, 185, 204);
     margin: 0;
     padding: 0;
     list-style-type: none;
@@ -54,27 +51,27 @@
   width: 250px;
   position: fixed;
   z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
+  top: 0px;
+  left: 0px;
+  background-color: #000;
   overflow-x: hidden;
-  padding-top: 16px;
+  padding-top: 25px;
   
 }
 
 /* Style sidebar links */
 #navbar a {
-  padding: 6px 8px 6px 16px;
+  padding: 20px 8px 12px 16px;
   text-decoration: none;
   font-size: 18px;
   color: #818181;
   display: block;
+  
 }
 
-
-/* Style the main content */
+/* Margin-left, same as the width of the navbar */
 .main {
-  margin-left: 250px; /* Same as the width of the sidenav */
+  margin-left: 250px; 
   padding: 0px 10px;
 }
 #main-doc {
@@ -82,7 +79,18 @@
    left: 300px;
  
 }
-/* Add media queries for small screens (when the height of the screen is less than 450px, add a smaller padding and font-size) */
+.main-list {
+    
+    list-style-type: none;
+}
+#title {
+    padding-top: 40px;
+    padding-left: 30px;
+
+}
+
+/* Add media queries for small screens (when the height of the screen is less than 700px 
+add a smaller padding and font-size) */
 @media screen and (max-height: 700px) {
   #navbar {padding-top: 15px;}
   #navbar a {font-size: 18px;}
@@ -100,16 +108,16 @@
 
 <nav id="navbar">
     <!--User Story #9, header element-->
-    
-    <ul>
-     <li><h2><a>ML Techniques for IDS</a></h2></li>
-    <li><a href="#HOME">HOME</a></li>
-    <li><a href="#ALGORITHM TYPES">ALGORITHM TYPES</a></li>  
-    <li><a href="#USE OF ML">USE OF ML</a></li> 
-    <li><a href="#IMPLEMENTING IDS">IMPLEMENTATING IDS</a></li> 
-    <li><a href="#IN THE FUTURE">IN THE FUTURE</a></li> 
-    <li><a href="#IN SUMMARY">IN SUMMARY</a></li>   
-       
+    <header id="title">
+    <h3>ML Techniques for IDS</h3>
+    </header>
+    <!--User Story #10, #11, #12-->
+    <ul class="main-list">
+    <li><a class="nav-link" href="#Machine_Learning_Techniques_for_Intrusion_Detection">Machine Learning Techniques for Intrusion Detection</a></li>
+    <li><a class="nav-link" href="#Supervised_vs_Unsupervised_Algorithms">Supervised vs Unsupervised Algorithms</a></li>  
+    <li><a class="nav-link" href="#Use_of_Machine_Learning_with_Intrusion_Detection">Use of Machine Learning with Intrusion Detection</a></li> 
+    <li><a class="nav-link" href="#Machine_Learning_and_the_Future">Machine Learning and the Future</a></li>
+    <li><a class="nav-link" href="#In_Summary">In Summary</a></li> 
     </ul>
 
 </nav>
@@ -118,14 +126,15 @@
 
 <!--User Story #1-->
 <main id="main-doc">
+<script type="text/javascript" src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 
 <!--User Story #2, 5 min sections--> 
 <!--User Story #4-->   
-<section class="main-section" id="ml_intrusiondetect">
+<section class="main-section" id="Machine_Learning_Techniques_for_Intrusion_Detection">
 <!--User Story #3, header element-->
-<h1 id="HOME">Machine Learning Techniques for Intrusion Detection</h1>
-<h2>by Natalie Gilmore</h2>
-
+<header id="Machine_Learning_Techniques_for_Intrusion_Detection">
+<h1>Machine Learning Techniques for Intrusion Detection</h1>
+</header>
 <!--User Story #5-->
 <p>
     Intrusion detection systems (IDS) utilize Machine Learning (ML) algorithms, Artificial Intelligence (AI) algorithms, and metrics, as a basic foundation to examine the dynamic change of data modified on a network or a host computer.  The testing perspective is to take a snapshot of data that has either been sitting on a host computer, hard drive, or in motion on a network, and then a comparison is made between past and future data.  This aids in determining when and where the cyber-attack or malicious attack originated.  From research explored, and focusing on Machine Learning, there are three types of problems that need to be solved with data, that is 1) classification, 2)regression, and 3) clustering.  And from these three types, the following techniques are chosen, which include both supervised (classification) and unsupervised (clustering) learning (Ray., 2019, p. 1).  
@@ -150,8 +159,10 @@
 
 </section>
 
-<section class="main-section" id="sup_unsup">
-<h3 id="ALGORITHM TYPES">Supervised vs. Unsupervised Algorithms</h3>
+<section class="main-section" id="Supervised_vs_Unsupervised_Algorithms">
+<header id="Supervised_vs_Unsupervised_Algorithms" >    
+<h3>Supervised vs Unsupervised Algorithms</h3>
+</header>
 <p>
     Supervised algorithms are linear whereas unsupervised algorithms are non-linear with data manipulation.  It was found that "supervised algorithms, in general, show better classification accuracy on the data with known attacks…." (Zamani & Movahedi, 2015, p. 4).  One example of a supervised method, a Machine Learning algorithm, is a Decision Tree algorithm (Ray., 2019, p. 3).  With known results, the Decision Tree algorithm achieved the best results, with a "95% true positive rate, 1% false-positive rate" (Zamani & Movahedi, 2015, p. 4).  While this is a great result, in reality, with unseen cyber-attacks, the "detection rate of supervised methods decreases significantly" (Zamani & Movahedi, 2015, p. 4).  Unsupervised algorithms have a better outcome,  a greater accuracy for both unseen and seen cyber-attack types (Zamani & Movahedi, 2015, p. 4).  Other examples of both supervised and unsupervised algorithms are Decision Tree, Support Vector Machines, K-Nearest Neighbor, Multilayer Perceptron, k-Means Clustering, single linkage clustering, and gamma-algoritm (Zamani & Movahedi, 2015, p. 3).
 </p>
@@ -184,12 +195,14 @@
 
 </section>
 
-<section class="main-section" id="use_mlid">
-<h3 id="USE OF ML">Use of Machine Learning with Intrusion Detection</h3>
+<section class="main-section" id="Use_of_Machine_Learning_with_Intrusion_Detection">
+<header id="Use_of_Machine_Learning_with_Intrusion_Detection">
+<h3>Use of Machine Learning with Intrusion Detection</h3>
+</header>
 <p>
     Another area that seems very difficult to comprehend, is the use of Machine Learning with intrusion detection when it comes to large high traffic networks that handle varying amounts of data at any given time.  The advantage with large systems is that Machine Learning is better with detecting spam for instance because the method of 'training the algorithm' is "to train a system with training patterns of all classes" (Zamani & Movahedi, 2015, p. 5).
 </p>
-<h3 id="IMPLEMENTING IDS">Ideas for Implementating an IDS</h3>
+<h3>Ideas for Implementating an IDS</h3>
 <p>
     Based on the journal literature, (Zamani & Movahedi, 2015), one has to look at the best type of algorithm to test over a TCP/IP network.  After evaluation, and considering which type of ML algorithm will perform in the most accurate manner due to seen and unseen cyber-attacks, unsupervised techniques are used.  Seen data is known data whereas unseen data is not known.  A baseline of data is used in reference to detect an anomaly, thereby seeing an intrusion.  How this is implemented and tested is by design.  One example of this is "a 2-tier anomaly-based architecture for IDS in TCP/IP networks" (Zamani & Movahedi, 2015, p.4).  See as described below.
     <br>
@@ -204,7 +217,6 @@
 
 <p>
     <h4>Unsupervised Learning: K-Means Algorithm</h4>
-    <h5>Ref:  VanderPlas, J. (n.d.). In depth: K-means clustering.</h5>
 
     <ul>
         <li>Specify the number of k of clusters to assign.</li>
@@ -215,12 +227,13 @@
         <li>until (until the next centroid positions do not change).</li>
 
     </ul>
+    <h5>(VanderPlas, J., 2022)</h5>
         
     <!--User Story #6, 5 code elements-->
     <!--User Story #7, 5 li elements-->
     <h4>Example of K-Means Cluster Model</h4>
     <h5>1. Python Scikit Header</h5>
-
+    <code id="code1">
     <p>
       
         <ul class="code_box1">
@@ -229,7 +242,10 @@
         <li>import seaborn as sns; sns.set()  # for plot styling</li>
         <li>import numpy as np</li>
         </ul>
+        <h5>(VanderPlas, J., 2022)</h5>
     </p>
+    </code>
+    <code id="code2"
     <h5>2. Generate Plot of Random Data</h5>
     
     <p>
@@ -241,9 +257,10 @@
         <li>plt.scatter(X[:, 0], X[:, 1], s=50);</li>
         
         </ul>
+        <h5>(VanderPlas, J., 2022)</h5>
     </p>
 
-
+    <code id="code3">
     <h5>3. Separate Data into Clusters</h5>
 
     <p>
@@ -256,9 +273,11 @@
 
 
         </ul>
+        <h5>(VanderPlas, J., 2022)</h5>
+    </p>
+    </code>
 
-</p>
-
+    <code id="code4">
     <h5>4. Label Sorted Data Clusters</h5>
     <p>
         <ul class="code_box4">
@@ -268,8 +287,11 @@
         <li>plt.scatter(centers[:, 0], centers[:, 1], c='black', s=200, alpha=0.5);</li>
     
     </ul>
-
+        <h5>(VanderPlas, J., 2022)</h5>
     </p>
+    </code>
+
+    <code id="code5">
     <h5>5. K-Means Algorithm: Expectation-Maximization</h5>
     <p>
 
@@ -301,30 +323,35 @@
             <li>centers, labels = find_clusters(X, 4)</li>
             <li>plt.scatter(X[:, 0], X[:, 1], c=labels,</li>
             <li>s=50, cmap='viridis');</li>
-
             </ul>
-            <h5>Ref:  VanderPlas, J. (n.d.). In depth: K-means clustering.</h5>
+            <h5>(VanderPlas, J.,2022)</h5>
     </p>
-
+    </code>
 
 </section>
 
-<section class="main-section" id="ml_future">
-<h3 id="IN THE FUTURE">Machine Learning and the Future</h3>
+<section class="main-section" id="Machine_Learning_and_the_Future">
+<header id="Machine_Learning_and_the_Future">
+<h3>Machine Learning and the Future</h3>
+</header>
 <p>
     Machine Learning techniques are important for intrusion detection because they are algorithms and software that will be improved over time and hopefully for high traffic networks.  This area of research is important because every day someone is being hacked especially, in a workplace environment that has had some of its intellectual property vandalized or stolen.  If not right now, it is something happening right now, someone is dealing with a hacker on their router, personal computer, or cell phone.  This is and will be a problem for us, and in our personal lives in the future.  As we become more dependent on these communication systems, in most aspects of our lives, home, in the office, etc. this may eventually lead to public or government regulations.    
 </p>
 </section>
 
-<section class="main-section" id="final_id">
-<h3 id="IN SUMMARY">Final thoughts on solving Intrusion Detection</h3>
+<section class="main-section" id="In_Summary">
+<header id="In_Summary">
+<h3>In Summary</h3>
+</header>
 <p>
     And finally, another interesting outcome from this research and the information from the journal literature, is that behind solving intrusion detection, Machine Learning and intrusion detection algorithms are used today's problems and sometimes guided to solve other issues as these algorithms learn in a certain way.  These algorithms are used for prediction, medical diagnosis, search engines, chatbots, data mining, biometrics, and imaging.  The idea of looking at the behavior through the eyes of a Machine that has Learned from not only data resulting in our modeling, but also from real-world testing, is intriguing.
 </p>
 </section>
 
-<section class="main-selection" id="_references">
+<section class="main-selection" id="References">
+<header id="References">
 <h3>References</h3>
+</header>
 <p>
     <ul style="list-style-type: none;" >
     <li>1. Brookshear, J. Glenn. (2012). Computer Science An Overview 11th Edition. Addison-Wesley, New York, NY
@@ -336,7 +363,7 @@
     doi: 10.1109/COMITCon.2019.8862451
     </li><br>
 
-    <li>4. VanderPlas, J. (n.d.). In depth: K-means clustering. Pythonic Perambulations. https://jakevdp.github.io/PythonDataScienceHandbook/05.11-k-means.html</li><br>
+    <li>4. VanderPlas, J. (2022). In depth: K-means clustering. Pythonic Perambulations. https://jakevdp.github.io/PythonDataScienceHandbook/05.11-k-means.html</li><br>
 
     <li>5. Zamani, M., & Movahedi, M. (2015). Machine learning techniques for intrusion detection. Ithaca: Cornell University Library, arXiv.org. Retrieved from https://proxy.cecybrary.com/login?url=https://search-proquest-com.proxy.cecybrary.com/docview/2081464968?accountid=144789
         </li><br>
@@ -348,7 +375,7 @@
 
 
 
-<footer>2022 by N.Gilmore, Machine Learning Techniques, CS814</footer>
+<footer>2022 by N.Gilmore, Machine Learning Techniques, CS814 - Date: 2020</footer>
 </main>
 
 </html>
